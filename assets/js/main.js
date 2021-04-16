@@ -1,0 +1,1 @@
+UIkit.slideshow(element).stopAutoplay();
