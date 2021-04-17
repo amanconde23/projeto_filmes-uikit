@@ -14,6 +14,17 @@
 </head>
 <body>
   <header>
+    <nav class="uk-container uk-navbar">
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@s menu">
+          <a href="#synopsis"><li>Synopsis</li></a>
+          <a href="#characters"><li>Characters</li></a>
+          <a href="#video"><li>Video</li></a>
+        </ul>
+        <a href="#" class="uk-navbar-toggle uk-hidden@s burger-menu" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+      </div>
+    </nav>
+
     <div class="uk-position-relative uk-visible-toggle slider" tabindex="-1" uk-slideshow="animation: push; autoplay: true; autoplay-interval: 5000; pause-on-hover: false">
       <ul class="uk-slideshow-items">
         <li>
@@ -29,7 +40,7 @@
           </div>
         </li>
         <li>
-          <img src="assets/images/bg-slide33.jpg" alt="" uk-cover>
+          <img src="assets/images/bg-slide3.jpg" alt="" uk-cover>
           <div id="slider-text" class="uk-position-bottom uk-position-medium uk-text-center uk-overlay uk-overlay-primary slider-text">
             <h3>Star Wars - The Rise of Skywalker</h3>
           </div>
@@ -37,29 +48,31 @@
       </ul>
   
       <div class="uk-light">
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover slider-controller" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover slider-controller" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
       </div>
     </div>
+  </header>
 
-    <nav>
-      <ul class="uk-flex uk-flex-right menu">
+  <div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav menu">
         <a href="#synopsis"><li>Synopsis</li></a>
         <a href="#characters"><li>Characters</li></a>
         <a href="#video"><li>Video</li></a>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <section id="synopsis" class="synopsis">
-    <h2>SYNOPSIS</h2>
+  <section id="synopsis" class="uk-container uk-container-expand uk-text-center synopsis">
+    <h2 class="title-section">SYNOPSIS</h2>
     <p>
       Thirty years after the Battle of Endor, a new threat has risen in the form of the First Order and the villainous Kylo Ren. Meanwhile, Rey, a young scavenger, discovers powers that will change her life -- and possibly save the galaxy.
     </p>
   </section>
 
-  <section id="characters" class="uk-text-center characters">
-    <h2>CHARACTERS</h2>
+  <section id="characters" class="uk-container uk-text-center characters">
+    <h2 class="title-section">CHARACTERS</h2>
     <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500" class="uk-flex uk-flex-center cards">
       <div class="uk-overlay-primary card-character">
         <img src="/assets/images/leia.png" alt="LEIA ORGANA">
@@ -84,8 +97,8 @@
     </div>
   </section>
 
-  <section id="video" class="uk-text-center video">
-    <h2>VIDEO</h2>
+  <section id="video" class="uk-container uk-container-expand uk-text-center video">
+    <h2 class="title-section">VIDEO</h2>
     <div class="uk-flex uk-flex-center video-iframe">
       <iframe src="https://www.youtube.com/embed/4r0287tUEgk" width="700" height="460" frameborder="0" uk-video="automute: true"></iframe>
     </div>
