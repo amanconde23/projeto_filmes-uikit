@@ -43,6 +43,10 @@ header{
   color: var(--yellow)!important;
 }
 
+.uk-offcanvas-bar{
+  width: 200px !important;
+}
+
 #slider-text{
   margin: 0;
   max-width: 100%;
